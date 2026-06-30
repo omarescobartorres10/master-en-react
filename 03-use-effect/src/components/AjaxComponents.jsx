@@ -25,11 +25,16 @@ export const AjaxComponents = () => {
 
 
 
-    const getUsuariosAjaxPromesa
 
     useEffect(() => {
         getUsuariosEstatitivos() 
     }, [])
+
+    //se renderiza el componente por primera vez
+    //DESPUÉS DEL RENDERIZADO se ejecuta el useEffect
+    //en el useEffect se ejecuta getUsuariosEstatitivos() 
+    //dentro de getUsuariosEstatitivos() se llama setUsarios
+    //eso actualiza el estado y react-re renderiza ek componente con la nueva lista de usuarios
 
 
   return (
